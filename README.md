@@ -2,9 +2,6 @@
 
 Este é o meu portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e evolução na área de Desenvolvimento Web.
 
-🔗 **Acesse o projeto online:**  
-[https://ginaaguiar.github.io/portfolio/](https://ginaaguiar.github.io/portfolio/)
-
 ---
 
 ## ✨ Sobre o Projeto
