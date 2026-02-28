@@ -1,38 +1,74 @@
+/*
+:root
+É o elemento raiz do documento HTML.
+Serve para criar VARIÁVEIS GLOBAIS do CSS,
+ou seja, valores reutilizáveis em todo o site.
+Muito usado para cores e temas.
+*/
 :root {
     --primary-color: #ff4d05; /* Laranja vibrante */
     --bg-color: #080808;      /* Fundo quase preto */
     --text-color: #ffffff;
     --gray-text: #b5b5b5;
 }
-
+/*
+    --primary-color
+    Variável CSS personalizada.
+    Armazena a cor principal do site.
+    Pode ser reutilizada usando: var(--primary-color)
+    */
+ /*
+    --bg-color
+    Cor padrão de fundo do site.
+    Facilita mudar o tema inteiro depois.
+    */
+/*
+    --text-color
+    Cor padrão dos textos principais.
+    */
+/*
+    --gray-text
+    Cor usada para textos secundários/descritivos.
+    */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: "Poppins", sans-serif;
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0;   /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /*
+    Faz largura e altura incluírem padding e borda.
+    Facilita MUITO o controle do layout.
+    */
+    font-family: "Poppins", sans-serif;   /* Define a fonte padrão do site. */
 }
+/*
+* (seletor universal)
+Seleciona TODOS os elementos da página.
+Usado para padronizar estilos iniciais.
+*/
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: var(--bg-color);  /* Define cor de fundo usando variável */
+    color: var(--text-color); /* Define cor padrão dos textos */
+    line-height: 1.6; /* Espaçamento entre linhas do texto */
+    overflow-x: hidden; /* Impede rolagem horizontal causada por elementos largos.*/
 }
 /* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 8px;
-    background: #111;
+    display: flex; /* display:flex - Ativa o FLEXBOX → sistema moderno de alinhamento. */
+    justify-content: space-between; /* Espaça elementos nas extremidades */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 25px 8px; /* Espaçamento interno */
+    background: #111; /* Cor de fundo */
 }
 
 .logo span { color: var(--primary-color); }
 
-.menu { display: flex; list-style: none; gap: 30px; }
+.menu { 
+    display: flex; /* Organiza itens lado a lado */
+    list-style: none; /* Remove bolinhas da lista */
+    gap: 30px; /* Espaço entre itens */
+}
 
 .menu a {
-    text-decoration: none;
     color: white;
     font-weight: 400;
     font-size: 0.9rem;
@@ -40,11 +76,11 @@ body {
 
 /* HERO SECTION */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 8%;
-    min-height: 80vh;
+    display: flex;  /* Layout flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça texto e imagem */
+    padding: 50px 8%; /* Espaçamento interno lateral */
+    min-height: 80vh; /* Altura mínima da tela (80% da viewport) vh = viewport height */
 }
 
 .hero-text { max-width: 500px; }
