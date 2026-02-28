@@ -1,34 +1,41 @@
 <!DOCTYPE html>
+<!-- Define que o documento usa HTML5 -->
 <html lang="pt-br">
+<!-- Define idioma do site (importante para SEO e acessibilidade) -->
 <head>
     <meta charset="UTF-8">
-
+<!-- Permite acentos e caracteres especiais -->
 <!--A tag "meta name" obrigatória para sites modernos. Sem  ela o celular tenta "fingir" que é um computador,deixando tudo minúsculo.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Faz o site se adaptar corretamente ao celular -->
 <!--O width=device-width -> Ajusta a largura do site para o tamanho exato da tela do aparelho, seja ele qual for.-->
-
 <!--initial-scale=1.0 -> Define que, ao carregar o zoom será padrão(100%), evitando que a página comece  "esticada" ou "encolhida"-->
 
 
     <title>Gina Aguiar | Meu Portifólio</title>
+<!-- Nome que aparece na aba do navegador -->
     <link rel="stylesheet" href="style.css">
 <!--link rel...style.css ->  Conecta o HTML ao CSS.-->
 
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- Importa fonte do Google Fonts -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <!--family=Poppins -> Nome da fonte escolhida.-->
-
+<!-- Importa ícones prontos (Font Awesome) -->
 <!--wght@300;500;700 -> Os pesos da fonte (espessura da letra): 300(fina); 500(normal); 700(negrito)-->
-
 <!--rel="stylesheet" -> Diz que isso é um arquivo de estilo (CSS).-->
 </head>
 
 <body>
 
     <header>
+<!-- Cabeçalho do site -->
         <nav class="navbar">
+<!-- Menu de navegação -->
             <h2 class="logo">Gina <span>Aguiar</span></h2>
+<!-- Nome/logo do site -->
                 <ul class="menu">
+<!-- Lista de links do menu -->
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
@@ -38,31 +45,30 @@
         </nav>
     </header>
 <!--Objetivo: Criar o cabeçalho do site. -> A barra superior com o nome + menu de navegação.-->
-
 <!--<header> -> Cabeçalho da página. É onde normalmente ficam: logo, menu, navegação principal. É uma tag semântica (ajuda Google e acessibilidade a entender o site).-->
-
 <!--<nav class="navbar"> -> Nav: Aqui dentro ficam os links de navegação do site. Class="navbar": Nome fictício para estilizar no CSS. Podendo ser qualquer nome.-->
-
 <!--<h2 class="logo">Gina Aguiar</h2> -> h2: Título. "Gina Aguiar": Texto que aparece. Class="logo": Nome fictício para estilizar no CSS. Na tela aparece: Gina Aguiar (nome do site).-->
-
 <!--<ul class="menu"> -> Ul = Lista não ordenada (lista com bolinhas). Li: É um item da lista.-->
-
 <!--<a href="#"> -> a: link clicável. href: É o destino do link. #: Ainda não leva para lugar nenhum (link vazio).-->
 
     <section class="hero">
-
+<!-- Primeira seção visível do site (apresentação principal) -->
         <div class="hero-text">
+<!-- Área dos textos principais -->
             <h4>HELLO!</h4>
             <h1>I'm <span>Gina Aguiar</span></h1>
+<!-- Título principal do site -->
             <h3 class="role">Front-End Developer</h3>
-
+<!-- Cargo ou objetivo profissional -->
             <p>
                 I am an Information Technology student and aspiring web developer focused on learning and building real projects using HTML, CSS, and JavaScript.
                 My goal is to grow professionally in the IT field, achieve financial independence, and continuously improve my skills while creating useful and modern digital solutions.
             </p>
-
+<!-- Resumo profissional -->
             <a href="https://wa.me/5586995735896?text=Olá!%20Vi%20seu%20portfólio%20e%20quero%20saber%20mais%20sobre%20seu%20trabalho." class="btn">Let's Talk</a>
+<!-- Link estilizado como botão (contato WhatsApp) -->
         <div class="social-icons">
+<!-- Ícones de redes sociais -->
             <a href="https://www.facebook.com/share/1Km6H8j4RK/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></a></i>
             <a href="https://www.instagram.com/ginaaguiar999?igsh=MW9vbjFsM3ByM3l2bQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></a></i>
             <a href="https://www.linkedin.com/in/gina-aguiar-708055235?utm_source=share_via&utm_content=profile&utm_medium=member_ios"><i class="fab fa-linkedin"></a></i>
@@ -71,7 +77,9 @@
         </div>
 
         <div class="hero-img">
+<!-- Área da foto -->
             <div class="img-glow">
+<!-- Container usado para criar efeito de brilho -->
             <img src="images/me200.png" alt="Gina Aguiar">
             </div>
         </div>
@@ -79,28 +87,30 @@
     </section>
 
 <!--Esse trecho é a parte principal da apresentação do site — aquilo que aparece primeiro quando alguém entra no portfólio.-->
-
 <!--section class="hero" -> section: Uma seção do site. Serve para dividir a página em partes organizadas. Exemplos: hero (apresentação), about, skills, projects. class="hero": Nome fictício para estilizar no CSS.-->
-
 <!--div class="hero-text" -> div: caixa organizadora. Ela agrupa todos os textos da apresentação.-->
-
+<!--Diferença para DIV:
+- SECTION → tem significado estrutural (parte do site).
+- DIV → é apenas uma caixa organizadora visual, sem significado.
+-->
 <!--<h4>HELLO!</h4> -> Título pequeno. Serve como saudação inicial.-->
-
 <!--<h1>I'm <span>Seu Nome</span></h1> -> h1: Título principal da página (o mais importante). span: Serve para destacar só uma parte do texto. Muito usado para destacar nome ou palavra-chave.-->
-
-<!--<h3>Front-End Developer</h3> -> Meu cargo ou objetivo profissional.-->
-
-<!--<p> -> Aqui fica seu resumo profissional.-->
-
 <!--<a href="#" class="btn">Let's Talk</a> -> É um link. Mas estilizado com CSS ele vira um botão. class="btn": Permite transformar o link em botão. href="#": Destino do botão. Depois você pode colocar: WhatsApp, LinkedIn, Email-->
 
     <section class="education">
-
+<!-- Seção de formação acadêmica -->
         <h2 class="section-title">Educa<span>tion</span></h2>
+<!--SPAN = usado para estilizar ou destacar uma pequena parte do texto.-->
+<!--Diferença para DIV:
+- SPAN → elemento inline (fica na mesma linha do texto).
+- DIV → elemento em bloco (cria uma nova linha).
+-->
         <div class="edu-container"> 
 
         <div class="edu-item">
+<!-- Cada formação -->
             <i class="fas fa-graduation-cap"></i>
+<!-- Ícone -->
                 <div class="edu-info">
             <h3>Information Technology Management</h3>
         </div>
@@ -123,10 +133,12 @@
     </section>
 
     <section class="skills-section">
+<!-- Seção de habilidades -->
         <div class="skills-column">
             <h2 class="sub-title">Ski<span>lls</span></h2>
 
             <ul class="skills-list">
+<!-- Lista de habilidades -->
                 <li><i class="fas fa-check"></i> Development</li>
                 <li><i class="fas fa-check"></i> Responsive Web Design</li>
                 <li><i class="fas fa-check"></i> API Integration</li>
@@ -140,6 +152,7 @@
             <h2 class="sub-title">Software <span>Skills</span></h2>
 
             <ul class="software-list">
+<!-- Tecnologias com imagens -->
                 <li class="software-list-html"><img src="images/HTML100.webp" alt="HTML logo" width=40px>HTML</li>
                 <li class="software-list-css"><img src="images/css100.webp" alt="CSS logo" width="35px">CSS</li>
                 <li class="software-list-js"><img src="images/JAVA100.webp" alt="Java logo" width="40px">JavaScript</li>
@@ -149,11 +162,14 @@
     </section>
 
     <section class="projects">
+<!-- Seção dos projetos -->
 
         <h2 class="section-title">Pro<span>jects</span></h2>
 
         <div class="project-grid">
+<!-- Container dos cards -->
             <div class="card">
+<!-- Card individual de projeto -->
                 <img src="images/Capa-calculadora626.PNG" alt="P1">
                 <a href="https://ginaaguiar.github.io/Calculadora-Simples/" target="_blank"><h3>Web  <span>Calculator</span></h3></a>
                 <p>Interactive web calculator built with HTML, CSS and JavaScript, featuring keyboard support and responsive design.</p>
