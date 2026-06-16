@@ -8,7 +8,7 @@ Meu portfólio pessoal desenvolvido para apresentar minha trajetória profission
 
 ## 📸 Preview
 
-![Portfólio](images/capa-portifolio.png)
+![Portfólio](images/capa-portifolio.PNG)
 
 ## ✨ Funcionalidades
 
