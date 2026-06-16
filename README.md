@@ -4,7 +4,7 @@ Meu portfólio pessoal desenvolvido para apresentar minha trajetória profission
 
 ## 🚀 Acesse o Projeto
 
-🔗 https://ginaaguiar.github.io/portfolio/
+🔗 https://ginaaguiar.github.io/Portfolio/
 
 ## 📸 Preview
 
