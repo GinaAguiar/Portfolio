@@ -8,6 +8,8 @@
     --gray-text: #d9d9e3;
     --border-color: rgba(245, 184, 232, 0.18);
     --shadow-color: rgba(232, 107, 189, 0.35);
+    --container-width: 1280px;
+    --page-gutter: 24px;
 }
 
 * {
@@ -28,6 +30,7 @@ body {
         var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -44,12 +47,13 @@ header {
 }
 
 .navbar {
-    max-width: 1150px;
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
+    max-width: var(--container-width);
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
+    padding: 22px 0;
 }
 
 .logo {
@@ -82,18 +86,20 @@ header {
 /* HERO */
 
 .hero {
-    max-width: 1150px;
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
+    max-width: var(--container-width);
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 440px);
     align-items: center;
     justify-content: space-between;
-    padding: 80px 8%;
-    min-height: 90vh;
-    gap: 50px;
+    padding: 56px 0;
+    min-height: calc(100svh - 90px);
+    gap: 72px;
 }
 
 .hero-text {
-    max-width: 570px;
+    max-width: 640px;
 }
 
 .hero-text h4 {
@@ -104,7 +110,7 @@ header {
 }
 
 .hero-text h1 {
-    font-size: 3.7rem;
+    font-size: 4.5rem;
     margin: 10px 0;
     line-height: 1.1;
 }
@@ -122,7 +128,8 @@ header {
 
 .hero-text p {
     color: var(--gray-text);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    max-width: 590px;
 }
 
 .hero-buttons {
@@ -196,8 +203,8 @@ header {
 
 .hero-img .img-glow {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     box-shadow: 0 0 70px rgba(232, 107, 189, 0.45);
@@ -209,8 +216,8 @@ header {
 .hero-img .img-glow::before {
     content: "";
     position: absolute;
-    width: 390px;
-    height: 390px;
+    width: 470px;
+    height: 470px;
     border-radius: 50%;
     border: 1px solid rgba(245, 184, 232, 0.25);
     animation: pulse 3s infinite;
@@ -221,6 +228,7 @@ header {
     height: 95%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center;
     border: 5px solid var(--bg-color);
     z-index: 1;
 }
@@ -263,9 +271,10 @@ header {
 /* ABOUT */
 
 .about {
-    max-width: 1150px;
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
+    max-width: var(--container-width);
     margin: auto;
-    padding: 80px 8%;
+    padding: 80px 0;
 }
 
 .about-card {
@@ -285,7 +294,7 @@ header {
 /* EDUCATION */
 
 .education {
-    padding: 80px 8%;
+    padding: 80px var(--page-gutter);
     background: rgba(29, 16, 51, 0.55);
 }
 
@@ -329,11 +338,12 @@ header {
 /* SKILLS */
 
 .skills-section {
-    max-width: 1150px;
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
+    max-width: var(--container-width);
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 80px 8%;
+    padding: 80px 0;
     gap: 50px;
 }
 
@@ -410,12 +420,12 @@ header {
 /* PROJECTS */
 
 .projects {
-    padding: 80px 8%;
+    padding: 80px var(--page-gutter);
     background: rgba(29, 16, 51, 0.55);
 }
 
 .project-grid {
-    max-width: 1150px;
+    max-width: var(--container-width);
     margin: auto;
     display: flex;
     justify-content: center;
@@ -495,9 +505,10 @@ header {
 /* CONTACT */
 
 .contact {
+    width: min(calc(100% - (var(--page-gutter) * 2)), 850px);
     max-width: 850px;
     margin: auto;
-    padding: 80px 8%;
+    padding: 80px 0;
     text-align: center;
 }
 
@@ -521,15 +532,43 @@ footer span {
 
 /* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 60px 8%;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+        gap: 48px;
     }
 
     .hero-text h1 {
-        font-size: 2.7rem;
+        font-size: 3.8rem;
+    }
+
+    .hero-img .img-glow {
+        width: 360px;
+        height: 360px;
+    }
+
+    .hero-img .img-glow::before {
+        width: 405px;
+        height: 405px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --page-gutter: 20px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        display: flex;
+        text-align: center;
+        padding: 52px 0 64px;
+        min-height: auto;
+        gap: 42px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
     }
 
     .hero-buttons {
@@ -552,29 +591,29 @@ footer span {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 18px;
-        padding: 20px;
+        gap: 16px;
+        padding: 18px 0;
     }
 
     .menu {
-        gap: 15px;
+        gap: 12px 16px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .hero-img .img-glow {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
 
     .hero-img .img-glow::before {
-        width: 315px;
-        height: 315px;
+        width: 335px;
+        height: 335px;
     }
 
     .section-title {
         font-size: 2rem;
-        white-space: nowrap;
+        overflow-wrap: anywhere;
     }
 
     .edu-item {
@@ -584,12 +623,76 @@ footer span {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --page-gutter: 16px;
+    }
+
+    .navbar {
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.35rem;
+    }
+
+    .hero {
+        padding: 40px 0 56px;
+        gap: 32px;
+    }
+
+    .hero-text h4 {
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+    }
+
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2.35rem;
     }
 
     .hero-text .role {
         font-size: 1.1rem;
+    }
+
+    .hero-text p {
+        font-size: 0.92rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        padding: 12px 22px;
+    }
+
+    .hero-img .img-glow {
+        width: 245px;
+        height: 245px;
+    }
+
+    .hero-img .img-glow::before {
+        width: 275px;
+        height: 275px;
+    }
+
+    .about,
+    .skills-section,
+    .projects,
+    .education,
+    .contact {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .about-card,
+    .edu-item,
+    .card-content {
+        padding: 20px;
     }
 
     .tech-grid {
@@ -598,5 +701,43 @@ footer span {
 
     .menu a {
         font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu {
+        gap: 10px 12px;
+    }
+
+    .menu a {
+        font-size: 0.76rem;
+    }
+
+    .hero {
+        padding-top: 32px;
+        gap: 26px;
+    }
+
+    .hero-img .img-glow {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-img .img-glow::before {
+        width: 248px;
+        height: 248px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.05rem;
+    }
+
+    .hero-text .role {
+        font-size: 1rem;
     }
 }

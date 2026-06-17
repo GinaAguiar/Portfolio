@@ -25,7 +25,6 @@ Meu portfólio pessoal desenvolvido para apresentar minha trajetória profission
 
 * HTML5
 * CSS3
-* JavaScript
 * Git
 * GitHub
 * GitHub Pages
@@ -49,8 +48,6 @@ Calculadora responsiva com suporte a operações matemáticas básicas.
 Este portfólio foi criado para demonstrar minha evolução como desenvolvedora Front-End, reunindo projetos, conhecimentos técnicos e minha trajetória de transição para a área de Tecnologia da Informação.
 
 ## 📬 Contato
-
-📧 Email: [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
 
 💼 LinkedIn:
 https://www.linkedin.com/in/gina-aguiar-708055235
