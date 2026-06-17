@@ -12,7 +12,7 @@ Meu portfólio pessoal desenvolvido para apresentar minha trajetória profission
 ![Portfólio](images/capa-portifolio-atual.jpg)
 
 📱 Versão Mobile
-![Portfólio](imagens/capa-mobile.jpeg)
+![Portfólio](images/capa-mobile.jpeg)
 
 ## ✨ Funcionalidades
 
